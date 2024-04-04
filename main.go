@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"math/big"
+	"os"
 	"time"
 
 	"github.com/ethereum/go-ethereum/accounts/abi/bind"
@@ -23,7 +24,7 @@ const (
 )
 
 func init() {
-	log.Root().SetHandler(log.LvlFilterHandler(log.LvlInfo, log.StdoutHandler))
+	log.SetDefault(log.NewLogger(log.NewTerminalHandlerWithLevel(os.Stderr, log.LevelInfo, true)))
 }
 
 func main() {
