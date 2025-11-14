@@ -1,4 +1,3 @@
-
 ## Generate Go from abi
 ```shell
 cd contracts/codexam
